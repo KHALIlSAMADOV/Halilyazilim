@@ -17,6 +17,44 @@
             color: white;
             padding: 20px;
             font-size: 28px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+        }
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            padding: 10px 0;
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 10px 20px;
+            display: block;
+            text-decoration: none;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
         }
         .container {
             width: 80%;
@@ -71,16 +109,36 @@
 </head>
 <body>
     <header>
-        Halil Yazılım - Özel Ders
+        
+        <div>Halil Yazılım - Özel Ders</div>
+        <nav>
+            <div class="dropdown">
+                <a href="#">Eğitimlerimiz ▾</a>
+                <div class="dropdown-content">
+                    <a href="#">Tüm Eğitimler</a>
+                    <a href="#">Yüz yüze</a>
+                    <a href="#">Online</a>
+                </div>
+            </div>
+            <a href="#team">Kadromuz</a>
+            <a href="#about">Hakkımızda</a>
+            <a href="#contact">İletişim</a>
+        </nav>
     </header>
     <div class="container">
         <img src="https://www.atlas.edu.tr/wp-content/uploads/2024/02/software-engineering.jpg" class="hero" alt="Halil Yazılım">
+    </div>
+
+    <div id="about">
+        <h2>Hakkımızda</h2>
+        <p>Ben Halil Semedov, Bilgisayar Mühendisliği Mezunuyum.</p>
+    </div>
         <div class="course">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_VimczMTZfzOetjyB19NwabMLv0vALVjXFA&s" alt="Python Eğitimi">
             <div class="course-content">
                 <h2>Python Eğitimi</h2>
                 <p>Python temellerinden ileri seviyeye kadar kapsamlı eğitim.</p>
-                <button onclick="window.location.href='#contact'">Detaylı Bilgi</button>
+                <button onclick="window.location.href='https://boenstitu.com/blog/python-nedir'">Detaylı Bilgi</button>
             </div>
         </div>
         <div class="course">
@@ -88,7 +146,7 @@
             <div class="course-content">
                 <h2>HTML & CSS Eğitimi</h2>
                 <p>Web tasarımının temel taşları olan HTML ve CSS ile modern siteler oluşturmayı öğrenin.</p>
-                <button onclick="window.location.href='#contact'">Detaylı Bilgi</button>
+                <button onclick="window.location.href='https://goit.global/tr/articles/html-ve-css-nedir-kimler-neden-ihtiyac-duyar/'">Detaylı Bilgi</button>
             </div>
         </div>
         <div class="course">
@@ -96,7 +154,7 @@
             <div class="course-content">
                 <h2>Makine Öğrenme Eğitimi</h2>
                 <p>Makine öğrenme algoritmaları ve veri bilimi konularını öğrenin.</p>
-                <button onclick="window.location.href='#contact'">Detaylı Bilgi</button>
+                <button onclick="window.location.href='https://www.sas.com/tr_tr/insights/analytics/machine-learning.html '">Detaylı Bilgi</button>
             </div>
         </div>
         <div class="course">
@@ -104,7 +162,7 @@
             <div class="course-content">
                 <h2>Derin Öğrenme Eğitimi</h2>
                 <p>Yapay sinir ağları ve ileri düzey derin öğrenme teknikleri.</p>
-                <button onclick="window.location.href='#contact'">Detaylı Bilgi</button>
+                <button onclick="window.location.href='https://www.sas.com/tr_tr/insights/analytics/deep-learning.html'">Detaylı Bilgi</button>
             </div>
         </div>
     </div>
@@ -113,5 +171,18 @@
         <p>Telefon: +90 555 095 77 42</p>
         <p>Email: semedovxelil259@gmail.com</p>
     </div>
+
+    <script>
+        function showAbout() {
+            var aboutSection = document.getElementById("about");
+            if (aboutSection.style.display === "none" || aboutSection.style.display === "") {
+                aboutSection.style.display = "block";
+                aboutSection.scrollIntoView({ behavior: "smooth" });
+            } else {
+                aboutSection.style.display = "none";
+            }
+        }
+    </script>
+
 </body>
 </html>
