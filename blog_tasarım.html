@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halil Yazılım - Özel Ders</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #222;
+            color: white;
+            padding: 20px;
+            font-size: 28px;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+        .course {
+            background-color: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .course img {
+            width: 30%;
+            border-radius: 8px;
+        }
+        .course-content {
+            width: 65%;
+            text-align: left;
+            padding-left: 20px;
+        }
+        .contact {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+        img.hero {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Halil Yazılım - Özel Ders
+    </header>
+    <div class="container">
+        <img src="https://www.atlas.edu.tr/wp-content/uploads/2024/02/software-engineering.jpg" class="hero" alt="Halil Yazılım">
+        <div class="course">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_VimczMTZfzOetjyB19NwabMLv0vALVjXFA&s" alt="Python Eğitimi">
+            <div class="course-content">
+                <h2>Python Eğitimi</h2>
+                <p>Python temellerinden ileri seviyeye kadar kapsamlı eğitim.</p>
+                <button onclick="window.location.href='#contact'">Detaylı Bilgi</button>
+            </div>
+        </div>
+        <div class="course">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxJyxvFAvhRaMVRxOQzqa3b6PD8hO0_Oavcw&s" alt="HTML & CSS Eğitimi">
+            <div class="course-content">
+                <h2>HTML & CSS Eğitimi</h2>
+                <p>Web tasarımının temel taşları olan HTML ve CSS ile modern siteler oluşturmayı öğrenin.</p>
+                <button onclick="window.location.href='#contact'">Detaylı Bilgi</button>
+            </div>
+        </div>
+        <div class="course">
+            <img src="https://www.turhost.com/blog/wp-content/uploads/2020/12/gorseller-02.jpg" alt="Makine Öğrenme Eğitimi">
+            <div class="course-content">
+                <h2>Makine Öğrenme Eğitimi</h2>
+                <p>Makine öğrenme algoritmaları ve veri bilimi konularını öğrenin.</p>
+                <button onclick="window.location.href='#contact'">Detaylı Bilgi</button>
+            </div>
+        </div>
+        <div class="course">
+            <img src="https://www.derinogrenme.com/wp-content/uploads/2015/07/derin_ogrenme_beyin_yapisi_yazi.jpg" alt="Derin Öğrenme Eğitimi">
+            <div class="course-content">
+                <h2>Derin Öğrenme Eğitimi</h2>
+                <p>Yapay sinir ağları ve ileri düzey derin öğrenme teknikleri.</p>
+                <button onclick="window.location.href='#contact'">Detaylı Bilgi</button>
+            </div>
+        </div>
+    </div>
+    <div id="contact" class="contact">
+        <h2>İletişim Bilgileri</h2>
+        <p>Telefon: +90 555 095 77 42</p>
+        <p>Email: semedovxelil259@gmail.com</p>
+    </div>
+</body>
+</html>
