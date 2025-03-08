@@ -15,21 +15,24 @@
         header {
             background-color: #222;
             color: white;
-            padding: 20px;
-            font-size: 28px;
+            padding: 15px;
+            font-size: 24px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 50px;
+            flex-wrap: wrap;
         }
         nav {
             display: flex;
-            gap: 20px;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding-top: 10px;
         }
         nav a {
             color: white;
             text-decoration: none;
-            font-size: 18px;
+            font-size: 16px;
         }
         .dropdown {
             position: relative;
@@ -39,14 +42,14 @@
             display: none;
             position: absolute;
             background-color: white;
-            min-width: 160px;
+            min-width: 140px;
             box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-            padding: 10px 0;
+            padding: 8px 0;
             z-index: 1;
         }
         .dropdown-content a {
             color: black;
-            padding: 10px 20px;
+            padding: 8px 15px;
             display: block;
             text-decoration: none;
         }
@@ -57,45 +60,46 @@
             display: block;
         }
         .container {
-            width: 80%;
+            width: 95%;
             margin: auto;
-            padding: 20px;
+            padding: 10px;
         }
         .course {
             background-color: white;
-            padding: 20px;
-            margin: 20px 0;
+            padding: 15px;
+            margin: 15px 0;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: space-between;
+            text-align: center;
         }
         .course img {
-            width: 30%;
+            width: 90%;
             border-radius: 8px;
         }
         .course-content {
-            width: 65%;
-            text-align: left;
-            padding-left: 20px;
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
         }
         .contact {
             background-color: #333;
             color: white;
-            padding: 20px;
-            margin-top: 20px;
+            padding: 15px;
+            margin-top: 15px;
             border-radius: 8px;
         }
         img.hero {
             width: 100%;
-            max-height: 400px;
+            max-height: 300px;
             object-fit: cover;
             border-radius: 8px;
         }
         button {
-            padding: 10px 20px;
-            font-size: 16px;
+            padding: 10px 15px;
+            font-size: 14px;
             cursor: pointer;
             border: none;
             background-color: #007BFF;
@@ -105,11 +109,28 @@
         button:hover {
             background-color: #0056b3;
         }
+        @media (max-width: 600px) {
+            header {
+                font-size: 20px;
+                flex-direction: column;
+                text-align: center;
+            }
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+            .course img {
+                width: 100%;
+            }
+            button {
+                font-size: 14px;
+                padding: 8px 12px;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-        
         <div>Halil Yazılım - Özel Ders</div>
         <nav>
             <div class="dropdown">
@@ -133,56 +154,48 @@
         <h2>Hakkımızda</h2>
         <p>Ben Halil Semedov, Bilgisayar Mühendisliği Mezunuyum.</p>
     </div>
-        <div class="course">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_VimczMTZfzOetjyB19NwabMLv0vALVjXFA&s" alt="Python Eğitimi">
-            <div class="course-content">
-                <h2>Python Eğitimi</h2>
-                <p>Python temellerinden ileri seviyeye kadar kapsamlı eğitim.</p>
-                <button onclick="window.location.href='https://boenstitu.com/blog/python-nedir'">Detaylı Bilgi</button>
-            </div>
-        </div>
-        <div class="course">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxJyxvFAvhRaMVRxOQzqa3b6PD8hO0_Oavcw&s" alt="HTML & CSS Eğitimi">
-            <div class="course-content">
-                <h2>HTML & CSS Eğitimi</h2>
-                <p>Web tasarımının temel taşları olan HTML ve CSS ile modern siteler oluşturmayı öğrenin.</p>
-                <button onclick="window.location.href='https://goit.global/tr/articles/html-ve-css-nedir-kimler-neden-ihtiyac-duyar/'">Detaylı Bilgi</button>
-            </div>
-        </div>
-        <div class="course">
-            <img src="https://www.turhost.com/blog/wp-content/uploads/2020/12/gorseller-02.jpg" alt="Makine Öğrenme Eğitimi">
-            <div class="course-content">
-                <h2>Makine Öğrenme Eğitimi</h2>
-                <p>Makine öğrenme algoritmaları ve veri bilimi konularını öğrenin.</p>
-                <button onclick="window.location.href='https://www.sas.com/tr_tr/insights/analytics/machine-learning.html '">Detaylı Bilgi</button>
-            </div>
-        </div>
-        <div class="course">
-            <img src="https://www.derinogrenme.com/wp-content/uploads/2015/07/derin_ogrenme_beyin_yapisi_yazi.jpg" alt="Derin Öğrenme Eğitimi">
-            <div class="course-content">
-                <h2>Derin Öğrenme Eğitimi</h2>
-                <p>Yapay sinir ağları ve ileri düzey derin öğrenme teknikleri.</p>
-                <button onclick="window.location.href='https://www.sas.com/tr_tr/insights/analytics/deep-learning.html'">Detaylı Bilgi</button>
-            </div>
+    <div class="course">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_VimczMTZfzOetjyB19NwabMLv0vALVjXFA&s" alt="Python Eğitimi">
+        <div class="course-content">
+            <h2>Python Eğitimi</h2>
+            <p>Python temellerinden ileri seviyeye kadar kapsamlı eğitim.</p>
+            <button onclick="window.location.href='https://boenstitu.com/blog/python-nedir'">Detaylı Bilgi</button>
         </div>
     </div>
+
+
+    <div class="course">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxJyxvFAvhRaMVRxOQzqa3b6PD8hO0_Oavcw&s" alt="HTML & CSS Eğitimi">
+        <div class="course-content">
+            <h2>HTML & CSS Eğitimi</h2>
+            <p>Web tasarımının temel taşları olan HTML ve CSS ile modern siteler oluşturmayı öğrenin.</p>
+            <button onclick="window.location.href='https://goit.global/tr/articles/html-ve-css-nedir-kimler-neden-ihtiyac-duyar/'">Detaylı Bilgi</button>
+        </div>
+    </div>
+
+    <div class="course">
+        <img src="https://www.turhost.com/blog/wp-content/uploads/2020/12/gorseller-02.jpg" alt="Makine Öğrenme Eğitimi">
+        <div class="course-content">
+            <h2>Makine Öğrenme Eğitimi</h2>
+            <p>Makine öğrenme algoritmaları ve veri bilimi konularını öğrenin.</p>
+            <button onclick="window.location.href='https://www.sas.com/tr_tr/insights/analytics/machine-learning.html '">Detaylı Bilgi</button>
+        </div>
+    </div>
+  
+
+    <div class="course">
+        <img src="https://www.derinogrenme.com/wp-content/uploads/2015/07/derin_ogrenme_beyin_yapisi_yazi.jpg" alt="Derin Öğrenme Eğitimi">
+        <div class="course-content">
+            <h2>Derin Öğrenme Eğitimi</h2>
+            <p>Yapay sinir ağları ve ileri düzey derin öğrenme teknikleri.</p>
+            <button onclick="window.location.href='https://www.sas.com/tr_tr/insights/analytics/deep-learning.html'">Detaylı Bilgi</button>
+        </div>
+    </div>
+
     <div id="contact" class="contact">
         <h2>İletişim Bilgileri</h2>
         <p>Telefon: +90 555 095 77 42</p>
         <p>Email: semedovxelil259@gmail.com</p>
     </div>
-
-    <script>
-        function showAbout() {
-            var aboutSection = document.getElementById("about");
-            if (aboutSection.style.display === "none" || aboutSection.style.display === "") {
-                aboutSection.style.display = "block";
-                aboutSection.scrollIntoView({ behavior: "smooth" });
-            } else {
-                aboutSection.style.display = "none";
-            }
-        }
-    </script>
-
 </body>
 </html>
