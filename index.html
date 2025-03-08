@@ -197,5 +197,19 @@
         <p>Telefon: +90 555 095 77 42</p>
         <p>Email: semedovxelil259@gmail.com</p>
     </div>
+
+
+    <script>
+        function showAbout() {
+            var aboutSection = document.getElementById("about");
+            if (aboutSection.style.display === "none" || aboutSection.style.display === "") {
+                aboutSection.style.display = "block";
+                aboutSection.scrollIntoView({ behavior: "smooth" });
+            } else {
+                aboutSection.style.display = "none";
+            }
+        }
+    </script>
+
 </body>
 </html>
